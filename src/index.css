@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html { scroll-behavior: smooth; }
+body { @apply bg-navy text-cream font-sans antialiased overflow-x-hidden;
+  background-image: radial-gradient(ellipse at 20% 0%, #5b123055, transparent 55%), radial-gradient(ellipse at 90% 100%, #5b123044, transparent 50%); background-attachment: fixed; }
+@layer components {
+  .section { @apply relative min-h-screen flex flex-col items-center justify-center px-5 py-20 text-center; }
+  .glass { @apply bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl shadow-xl; }
+  .btn { @apply px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105 active:scale-95; }
+  .btn-primary { @apply btn bg-gradient-to-r from-wine to-rose-700 text-cream border border-gold/40 shadow-lg shadow-wine/40 hover:shadow-gold/20; }
+  .btn-ghost { @apply btn border border-blush/40 text-blush hover:bg-blush/10; }
+  .title { @apply font-serif font-bold text-3xl sm:text-5xl leading-tight; }
+}
