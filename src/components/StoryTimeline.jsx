@@ -23,7 +23,7 @@ export default function StoryTimeline() {
             </div>
           </Reveal>
         ))}
-        <Reveal delay={200} className="pl-16"><p className="italic text-cream/70">At this point, I knew I was about to send the most awkward ask-out of my life… strictly for a Freshers partner, of course. 😅</p></Reveal>
+        <Reveal delay={200} className="pl-16"><p className="italic text-cream/70">At this point, I knew I was about to send the most awkward ask-out of my life… that I regret it later, but now you have one of the memory of us that — A first year junior ghost his 4th year senior. 😂</p></Reveal>
       </div>
     </section>
   )

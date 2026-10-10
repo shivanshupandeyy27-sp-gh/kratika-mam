@@ -4,7 +4,7 @@ import { KARTIKA_NAME } from '../config'
 import { scrollToId } from '../hooks'
 export default function Hero() {
   const [show, setShow] = useState(false)
-  useEffect(() => { const t = setTimeout(() => setShow(true), 2800); return () => clearTimeout(t) }, [])
+  useEffect(() => { const t = setTimeout(() => setShow(true), 800); return () => clearTimeout(t) }, [])
   const dots = useMemo(() => Array.from({ length: 36 }, () => ({
     l: Math.random() * 100, t: Math.random() * 100, s: 2 + Math.random() * 4, d: Math.random() * 5, f: Math.random() > 0.6 })), [])
   return (
@@ -16,9 +16,6 @@ export default function Hero() {
       <p className="mt-6 max-w-xl text-cream/80 text-base sm:text-lg leading-relaxed">
         I've got a small question that might make my Freshers a lot more memorable… 👀😂<br />
         Would you give me the honour of having your company for the evening? 😌✨
-      </p>
-      <p className={`mt-6 font-serif italic text-gold text-lg transition-all duration-1000 ${show ? 'opacity-100' : 'opacity-0 translate-y-3'}`}>
-        Actually... it's related to Freshers.
       </p>
       <button onClick={() => scrollToId('story')} className={`btn-primary mt-10 inline-flex items-center gap-2 transition-opacity duration-1000 ${show ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
         Okay, What's the Plan? <ArrowRight size={18} />
